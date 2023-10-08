@@ -37,6 +37,6 @@ urlpatterns = [
     # path('user/list/', views.user_list),
     # path('user/add/', views.add_user),
 
-    # ## ManagerSYS路由 ## #
+    # ## ManagerSYS路由啊 ## #
     path('', views.index)
 ]
