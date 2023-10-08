@@ -1,0 +1,42 @@
+{% extends 'layot.html'%}
+
+{% block title %}分类管理{% endblock %}
+
+{% block content %}
+        <div>
+            <a class="btn btn-success" href="/class/add/">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                新建分类
+            </a>
+        </div>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                分类列表
+            </div>
+
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>分类名</th>
+                    <th>功能操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for obj in class_list %}
+                    <tr>
+                        <th>{{ obj.id }}</th>
+                        <td>{{ obj.cname }}</td>
+                        <td>
+                            <a class="btn btn-primary btn-xs" href="/class/edit/{{ obj.id }}">编辑</a>
+                            <a class="btn btn-danger btn-xs" href="/class/del/?nid={{ obj.id }}">删除</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

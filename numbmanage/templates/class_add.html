@@ -1,0 +1,12 @@
+{% extends 'layot.html' %}
+{% block title %}新建分类{% endblock %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>分类名称</label>
+            <input type="text" class="form-control" placeholder="此处输入您要添加的分类名称" name="cname">
+        </div>
+        <button type="submit" class="btn btn-primary">提 交</button>
+    </form>
+{% endblock %}

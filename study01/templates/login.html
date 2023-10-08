@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>用户登录</title>
+    <meta name="description" content=""/>
+    <meta name="keywords"
+          content="饭拍,饭拍秀,韩国女团饭拍视频,高贝娱乐,免费饭拍下载,韩国娱乐新闻,韩国女团饭拍,韩国美女,韩国车模饭拍,fancam"/>
+    <script type="text/javascript" src="/js/min.js?version=3.0.0"></script>
+    <script type="text/javascript" src="/js/lang/cn.js?t=1679888554"></script>
+    <script type="text/javascript" src="/js/tczAppsui.js?t=1679888554"></script>
+    <link href="/images/style.css?t=1679888554" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="ui_dl">
+    <div class="out">
+        <div class="left"><a href="/"><img src="/images/logo_admin.png"></a></div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+<div class="ui_line"></div>
+<div class="ui_win">
+    <script type="text/javascript">
+        function login_reg() {
+            PZ.reg({log: 'open'});
+        }
+    </script>
+    <div class="title">
+        <div class="left">登录系统</div>
+        <!--
+        <div class="right">Your IP address：36.129.58.226</div>
+        -->
+        <div class="right"></div>
+    </div>
+    <div class="login" id="tcz_login">
+        <form method="post" action="/login/">
+            {% csrf_token %}
+            <div class="cname">账号 / 邮箱 / 手机：</div>
+            <div class="inp"><input type="text" name="user"></div>
+            <div class="cname">登录密码：</div>
+            <div class="inp"><input type="password" name="pwd"></div>
+            <div class="btn">
+                <input class="out" type="submit" value="立即登录">
+            </div>
+            <div class="link">
+                <a href="javascript:PZ.reg({log:'open'})">快速注册</a>&nbsp;
+                <span></span><a href="javascript:" onclick="PZ.findpass({log:'open'})">找回密码</a>
+                <span></span><a href="javascript:" onclick="PZ.login({log:'wxlogin'})">微信登录</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="web" id="tcz_web"></div>
+</div> 
+<div class="ui_foot">
+    <a href="/" target=_blank>赋予爱</a> 版权所有　<a href="#" target=_blank></a><br>
+    Copyright © www.gaobei.com All Rights Reserved.
+</div>
+
+</body>
+</html>

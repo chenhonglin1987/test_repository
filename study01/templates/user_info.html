@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>电话</th>
+        <th>账号</th>
+        <th>密码</th>
+    </thead>
+    <tbody>
+    {% for obj in user_list %}
+        <tr>
+            <td>{{ obj.id }}</td>
+            <td>{{ obj.name }}</td>
+            <td>{{ obj.tel }}</td>
+            <td>{{ obj.account }}</td>
+            <td>{{ obj.password }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
