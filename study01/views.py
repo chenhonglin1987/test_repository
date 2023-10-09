@@ -54,7 +54,7 @@ def news(req):
 
 def test(req):
     print(req.POST)
-    return redirect("http://www.baidu.com")
+    return redirect("http://www.baidu.com1")
 
 
 def login(req):
